@@ -515,6 +515,13 @@ address {
     background-color: #2F303A;
     padding: 60px 0;
 }
+.footer-container {
+    display: flex;
+}
+.footer-tab {
+    display: block;
+    align-items: baseline;
+}
 .address {
     margin-top: 20px;
 }
@@ -530,9 +537,7 @@ address {
 .logo-footer>span {
     color: var(--second-color);
 }
-.footer> .container>ul>li {
-    margin-top: 9px;
-}
+
 .contact{
     font-weight: 400;
     font-size: 14px;
@@ -545,10 +550,9 @@ address {
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
 }
-.footer-tab {
-    display: flex;
-}
+
 .footer-tabs {
+    display: block;
     margin-left: 70px;
 }
 .footer-title {
@@ -556,7 +560,7 @@ address {
     text-transform: uppercase;
     color: var(--second-color);
     margin-bottom: 20px;
-    margin-top: 12px;
+
 }
 .footer-icon-cover {
     display: flex;
@@ -595,7 +599,7 @@ address {
     fill: var(--second-color);
 }
 .footer-tab-list {
-    margin-left: 93px;
+    margin-left: auto;
 }
 .footer-input-mail {
     align-items: center;
@@ -603,6 +607,7 @@ address {
     width: 358px;
     height: 50px;
     padding-left: 16px;
+    color: var(--second-color);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -617,7 +622,7 @@ address {
     border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1, 875;
+    line-height: 1.875;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
@@ -647,8 +652,7 @@ address {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    padding: 40px;
     width: 528px;
     height: 581px;
 
@@ -684,7 +688,7 @@ address {
     transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover .modal-icon-close,
-.modal-btn:hover .modal-icon-close {
+.modal-btn:focus .modal-icon-close {
     fill: var(--main-btn-color);
 }
 .backdrop.is-hidden {
@@ -695,7 +699,7 @@ address {
 .modal-form {
     display: flex;
     flex-direction: column;
-    margin: 35px 45px 45px;
+
 }
 .modal-title {
     font-weight: 700;
@@ -714,12 +718,15 @@ address {
 .modal-form-btn {
     font-weight: 700;
     font-size: 16px;
-    line-height: 1, 875;
+    line-height: 1.875;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: transparent;
-    padding: 10px 54px;
+    padding: 10px 52px;
+    width: 200px;
+    height: 50px;
     margin-top: 30px;
+    align-items: center;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -758,10 +765,12 @@ address {
 }
 
 .modal-input:hover,
+.modal-input:focus,
 .modal-form-label>textarea:hover {
     border-color: var(--main-btn-color);
 }
-.modal-input:hover+.modal-icon-field {
+.modal-input:hover+.modal-icon-field,
+.modal-input:focus+.modal-icon-field {
     fill: var(--main-btn-color);
 }
 .modal-form-label>textarea {
@@ -789,8 +798,8 @@ address {
     align-items: center;
     padding-left: 8px;
 }
-.modal-privacy-text>a {
-    margin-left: 5px;
+.modal-privacy-text {
+    margin-right: 5px;
 }
 .offer-text {
     color: var(--main-btn-color);
@@ -800,11 +809,11 @@ address {
     display: flex;
     align-items: center;
     margin-left: 12px;
+    margin-top: 20px;
 }
-.modal-check-text {
+.offer-text {
     display: flex;
     align-items: center;
-    margin-top: 20px;
 }
 .modal-check-text:before {
     content: '';
